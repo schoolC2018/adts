@@ -92,4 +92,71 @@ void List::remove(int k)
 	}
 	
 	//Implementations of missing operations
+
+
+int List::getelement(int k)
+{
+	   Node* iPtr = frontPtr;
+	   
+	   if(k==1)
+	      {
+		 return iPtr -> data;
+              }
+	    else 
+	    {
+	        for(int i=1; i <k; i++)
+	           {
+	             iPtr = iPtr -> link;
+	           }
+	             return iPtr -> data;
+	   }
+}
+void List::empty()
+{
+	if(size() ==0)
+	{
+	   cout<<"The list is empty" <<endl;
+	}
+}
+
+void List::display()
+{
+	if(size() == 0)
+	{
+	    cout<<"The list is empty" <<endl;
+	}
+	else 
+	 {
+	     Node* iPtr = frontPtr;
+	      for(int i = 1; i <= size(); i++)
+	        { 	
+	           Node* iPtr = frontPtr;
+
+	            if (i == 1)
+		        {
+				       cout << iPtr -> data <<endl;
+	            }
+	              else 
+			     {
+ 			       for(int j=1; j < i; j++)
+				      {
+				         iPtr = iPtr -> link; 
+			          } 
+				
+	                        cout << iPtr -> data <<endl;
+	              }
+	       }
+	}
+}
+void List::clear()
+{
+	while(size() != 0)
+	{
+	   remove(1);
+	}
+}
+
+
+	
+
 	
