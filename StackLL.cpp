@@ -40,7 +40,7 @@ void Stack::pop()
 }
 
 int Stack::top()
-[
+{
 	Node* topPtr = frontPtr;
 	int topval = topPtr -> data;
 	return topval;
